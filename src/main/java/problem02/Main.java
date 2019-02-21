@@ -16,16 +16,23 @@ public class Main {
 			// num1, num2, arith 세 개의 변수와 getInstance 메소드를 사용하여
 			// 문제의 결과화면에 맞게 출력하는 계산기 나머지 코드를 아래에 완성 하십시오.
 			// 주어진 코드는 수정하지 않습니다.
+			
+			Arithmetic a = getInstance(arith);
+			System.out.println(a.calculate(num1, num2));
 
-		
-		
 		}
 	}
 	
 	public static Arithmetic getInstance(String arith) {
 		
 		// 메소드 구현을 완성 하십시오.
+		Arithmetic result =null;
 		
-		return null;
+		if (arith.equals("+")) result = new Add();
+		else if (arith.equals("-")) result = new Sub();
+		else if (arith.equals("*")) result = new Mul();
+		else if (arith.equals("/")) result = new Div();
+		
+		return result;
 	}
 }

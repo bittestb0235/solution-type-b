@@ -11,6 +11,20 @@ public class Main {
 		//
 		// 코드를 완성 하십시오.
 		//
+		int max = arr[0] * arr[1];
+		int a = arr[0];
+		int b = arr[1];
 		
+		for (int i = 0; i<arr.length; i++) {
+			for (int j = i+1; j<arr.length; j++) {
+				if (arr[i]*arr[j]>max) {
+					max = arr[i]*arr[j];
+					a = arr[i];
+					b = arr[j];
+				}
+			}
+		}
+		
+		System.out.println("[" + a + "," + b + "]");
 	}
 }
